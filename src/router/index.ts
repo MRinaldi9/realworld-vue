@@ -31,6 +31,7 @@ const router = createRouter({
       },
       props: ({ params }) => {
         const username = params.profileName as string
+
         return {
           usernameProfile: username
             .split('-')

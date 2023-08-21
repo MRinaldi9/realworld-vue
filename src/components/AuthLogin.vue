@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import type { ErrorMessages, LoginUser, Password } from '@/types'
+import type { ErrorMessages, LoginUser } from '@/types'
 import { reactive, toValue } from 'vue'
 import { RouterLink } from 'vue-router'
 import AuthErrorMessages from './AuthErrorMessages.vue'
 import BaseButton from './BaseButton.vue'
 import BaseInput from './BaseInput.vue'
 
-const form = reactive({ email: '', password: '' as Password })
+const form = reactive({ email: '', password: '' })
 defineProps<{ errors: ErrorMessages | null }>()
 defineEmits<{ login: [form: LoginUser] }>()
 </script>

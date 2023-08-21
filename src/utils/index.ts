@@ -1,5 +1,3 @@
-import type { Password } from '@/types'
-
-export function createPassword(val: string): val is Password {
-  return !!val
+export function randomNumberBetween(min: number, max: number) {
+  return Math.floor(Math.random() * (max - min + 1)) + min
 }
